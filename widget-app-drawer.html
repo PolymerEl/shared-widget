@@ -92,7 +92,7 @@
 
         if (oldState !== this._drawerState) {
           if (this._drawerState === this._DRAWER_STATE.OPENED) {
-            this._setKeyboardFocusTrap();
+            // this._setKeyboardFocusTrap();
             document.addEventListener('keydown', this._boundEscKeydownHandler);
             // document.body.style.overflow = 'hidden';
           } else {
