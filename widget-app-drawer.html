@@ -92,6 +92,7 @@
 
         if (oldState !== this._drawerState) {
           if (this._drawerState === this._DRAWER_STATE.OPENED) {
+          	// Note(cg): we remove _setKeyboard .. to avoid the page jumping to drawer when lazy importing it.
             // this._setKeyboardFocusTrap();
             document.addEventListener('keydown', this._boundEscKeydownHandler);
             // document.body.style.overflow = 'hidden';
