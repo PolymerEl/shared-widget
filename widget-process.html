@@ -164,8 +164,8 @@
         if (value || value === 0) {
           this.set(name, value);
         }
-        if (name === 'lastMessage' && this.userToast) {
-          this.dispatchEvent(new CustomEvent(`toast-${this.status === 'error' ? '-error' : '-auto'}`, { detail: value, bubbles: true, composed: true }));
+        if (name === 'lastMessage' && this.useToast && value) {
+          this.dispatchEvent(new CustomEvent(`toast-${this.status && this.status.status === 'error' ? 'error' : 'auto'}`, { detail: value, bubbles: true, composed: true }));
         }
       }
 
